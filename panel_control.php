@@ -1,0 +1,50 @@
+<?php
+	//Actualizado a PHP > 7 
+	//Victoria Ganuza
+	//Fecha: 20/09/2022
+
+	include "includes/header.php";
+	include "seguridad_bd.php";
+	include_once ('includes/class.Tpl.php');
+
+	$tpl = new tpl("templates/panel_control/main.html");
+
+	$sesion = new Sesion;	
+	if ( !$sesion->chequear_sesion() ){	
+		$sesion = NULL;
+		header("Location: index.php");	
+		exit();
+	}
+	$autenticado = $_SESSION["autentificado"];
+	$nombre_usuario = $_SESSION["usuario"];
+	$contrasenia = $_SESSION["contrasenia"];
+	$sesion = NULL;	
+
+	$bd = new Bd;
+	$bd->AbrirBd();
+	//$userData = $bd->consultar_nombre_usuario($nombre_usuario);
+	//$puede_entrar = $bd->getPermisos($userData,'CAN_ACCESS_GRAL');
+	
+	$tpl->setVar("user",$nombre_usuario);
+	$tpl->setVar("sBack","");
+	$tpl->setVar("linkBack","#");
+	
+	$oModulos   = $bd->getPanel("panel_control");
+	
+	if($oModulos){
+		$sBlockData = $tpl->beginBlock("REG");
+		foreach($oModulos as $Item){
+			if ($bd->checkAccess($_SESSION["id_usuario"],$Item['id_permiso'],$Item['acceso'])){
+				$vVars = array(
+				'link'=>$Item['link'],
+				'icono'=>'iconos/'.$Item['icono'],
+				'nombre'=>$Item['nombre']
+				);
+				$tpl->addToBlock($sBlockData,$vVars);
+			}
+		}
+		$tpl->endBlock();
+	}
+
+	$tpl->printTpl();
+?>

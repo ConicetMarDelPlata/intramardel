@@ -1,0 +1,201 @@
+/* CSS Document */
+/* PAGINACION */
+ul    { border:0; margin:0; padding:0; }
+#pagination-digg li          { border:0; margin:0; padding:0; font-size:11px; list-style:none; /* savers */ float:left; }
+#pagination-digg a           { border:solid 1px #9aafe5; margin-right:2px; }
+#pagination-digg .previous-off,
+#pagination-digg .next-off   { border:solid 1px #DEDEDE; color:#888888; display:block; float:left; font-weight:bold; margin-right:2px; padding:3px 4px; }
+#pagination-digg .next a,
+#pagination-digg .previous a { font-weight:bold; }
+#pagination-digg .active     { background:#2e6ab1; color:#FFFFFF; font-weight:bold; display:block; float:left; padding:4px 6px; /* savers */ margin-right:2px; }
+#pagination-digg a:link,
+#pagination-digg a:visited   { color:#0e509e; display:block; float:left; padding:3px 6px; text-decoration:none; }
+#pagination-digg a:hover     { border:solid 1px #0e509e; }
+/**************/
+.divIcon{
+	float:left;
+	margin:10px;
+	width:125px;
+}
+
+.imgIcon{
+	width:55px;
+	height:55px;
+}
+
+.tabla {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align: center;
+	width: 100%;
+}
+
+.tabla th,
+.tabla thead.th {
+	padding: 3px;
+	font-size: 12px;
+	background-color: #47849E; /*#83aec0;*/
+	background-image: url(fondo_th2.png);
+	background-repeat: repeat-x;
+	color: #FFFFFF;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #558FA6;
+	border-bottom-color: #558FA6;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;/*text-transform: uppercase;*/
+}
+
+.tabla thead.th .left-align {
+	text-align: left;
+}
+
+.tabla .modo1 {
+	font-size: 11px;
+	font-weight:normal;
+	background-color: #e2ebef;
+	background-image: url(fondo_tr01.png);
+	background-repeat: repeat-x;
+	color: #34484E;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.tabla .modo1 td {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #A4C4D0;
+	border-bottom-color: #A4C4D0;
+	text-align:center;
+ 	padding-top: 1px;
+	padding-right: 3px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+} 
+.tabla .modo3 td {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #A4C4D0;
+	border-bottom-color: #A4C4D0;
+	text-align:left;
+ 	padding-top: 1px;
+	padding-right: 5px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+} 
+
+.tabla .modo1 th {
+	background-image: url(fondo_tr01a.png);
+	background-position: left top;
+	font-size: 12px;
+	font-weight:bold;
+	text-align: center;
+	background-color: #e2ebef;
+	background-repeat: repeat-x;
+	color: #34484E;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #A4C4D0;
+	border-bottom-color: #A4C4D0;
+}
+
+.tabla .modo2 {
+font-size: 12px;
+font-weight:bold;
+background-color: #fdfdf1;
+background-image: url(fondo_tr02.png);
+background-repeat: repeat-x;
+/*color: #990000; rojo bordo*/
+font-family: "Trebuchet MS", Arial;
+text-align:center;
+}
+
+
+textarea{
+font-size: 15px;
+font-family: "Trebuchet MS", Arial;
+}
+
+.tabla .modo2 td {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #EBE9BC;
+	border-bottom-color: #EBE9BC;
+	padding-top: 1px;
+	padding-right: 3px;
+	padding-bottom: 1px;
+	padding-left: 3px;
+	background-color: #ffffff;
+}
+.tabla .modo2 th {
+background-image: url(fondo_tr02a.png);
+background-position: left top;
+font-size: 12px;
+font-weight:bold;
+background-color: #fdfdf1;
+background-repeat: repeat-x;
+color: #990000;
+font-family: "Trebuchet MS", Arial;
+text-align:center;
+border-right-width: 1px;
+border-bottom-width: 1px;
+border-right-style: solid;
+border-bottom-style: solid;
+border-right-color: #EBE9BC;
+border-bottom-color: #EBE9BC;
+}
+
+.tabla_form {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+
+.tabla_form .modo1 {
+font-size: 12px;
+font-weight:bold;
+background-color: #e2ebef;
+background-image: url(fondo_tr01.png);
+background-repeat: repeat-x;
+color: #34484E;
+font-family: "Trebuchet MS", Arial;
+}
+
+.tabla_form .modo2 {
+font-size: 12px;
+font-weight:bold;
+background-color: #83AFC0;
+background-image: url(fondo_th2.png);
+background-repeat: repeat-x;
+/*color: #990000; rojo bordo*/
+font-family: "Trebuchet MS", Arial;
+text-align:center;
+}
+
+.tabla_form .modo3 {
+font-size: 14px;
+font-weight:normal;
+background-color: #e2ebef;
+background-image: url(fondo_tr01.png);
+background-repeat: repeat-x;
+color: #34484E;
+font-family: "Trebuchet MS", Arial;
+}
+
+
+.tabla_form .modo4 {
+font-size: 12px;
+font-weight:bold;
+background-color: #e2ebef;
+background-image: url(fondo_tr01.png);
+background-repeat: repeat-x;
+color: #777777;
+font-family: "Trebuchet MS", Arial;
+}

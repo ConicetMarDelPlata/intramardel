@@ -1,0 +1,454 @@
+fieldset {
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.text-end {
+    text-align: end;
+}
+.form-default{
+    position: relative;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+.form-default label{
+    position: relative;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    overflow: hidden;
+    color: #b8b8b8;
+    display: block;
+    font-weight: 400;
+    font-size: 16px;
+    left: 0;
+    line-height: 20px;
+    max-height: 20px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    top: 35px;
+}
+.form-default label>span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+.form-default input,
+.form-default select,
+.form-default textarea {
+    width: 100%;
+    background-color: transparent;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid #CCCCCC;
+    color: #707070;
+    padding: 5px 10px;
+    outline: 0;
+}
+.form-default input,
+.form-default select {
+    height: 40PX;
+    line-height: normal;
+}
+.form-default textarea {
+    resize: none;
+}
+.form-default .textarea--small {
+    height: 100px;
+    padding: 10px;
+}
+.form-default .textarea--medium {
+    height: 145px;
+    padding: 10px;
+}
+.form-default .form-content {
+    position: relative;
+    padding-bottom: 10px;
+}
+.form-default .form-content-input,
+.form-default .form-content-select,
+.form-default .form-content-textarea {
+    position: relative;
+    padding-top: 25px;
+}
+.form-default .form-content-input>input{
+    -moz-transition: background-color .3s;
+    -o-transition: background-color .3s;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+}
+.form-default .form-content-input button,
+.form-default .form-content-input> [class*="icon-"]{
+    background-color: transparent;
+    border: 0;
+    color: #707070;
+    font-size: 22.4px;
+    padding: 0;
+    position: absolute;
+    top: 25px;
+    z-index: 1;
+}
+.form-default .form-content-input button {
+    padding: 0 10px;
+    right: 0;
+}
+.form-default .form-content-input button>[class*="icon-"] {
+    line-height: 39px;
+}
+.form-default .form-content-input button .medium {
+    font-size: 26px;
+    padding: 0 8px;
+}
+.form-default .form-content-input::before,
+.form-default .form-content-select::before,
+.form-default .form-content-textarea::before {
+    -moz-transition: width 3s;
+    -o-transition: width 3s;
+    -webkit-transition: width 3s;
+    transition: width 3s;
+    width: 0;
+    bottom: 0;
+    content:"";
+    height: 2px;
+    left:0;
+    position: absolute;
+    z-index: 1;
+}
+.form-default .form-content-input::after,
+.form-default .form-content-select::after,
+.form-default .form-content-textarea::after {
+    -moz-transition: width .3s;
+    -o-transition: width .3s;
+    -webkit-transition: width .3s;
+    transition: width .3s;
+    background-color: #707070;
+    bottom: 0;
+    content:"";
+    height: 2px;
+    left:0;
+    position: absolute;
+    width: 0;
+}
+.form-default .form-content-input:hover input,
+.form-default .form-content-input:hover textarea,
+.form-default .form-content-input:hover select,
+.form-default .form-content-select:hover input,
+.form-default .form-content-select:hover select,
+.form-default .form-content-select:hover textarea,
+.form-default .form-content-textarea:hover input, 
+.form-default .form-content-textarea:hover select,
+.form-default .form-content-textarea:hover textarea {
+    background-color: #F0F0F0;
+}
+.form-default .form-content-input:hover:after,
+.form-default .form-content-select:hover:after,
+.form-default .form-content-textarea:hover:after {
+    width: 100%;
+}
+.form-default .is-focused label {
+    color: #707070;
+    top: 4px;
+    font-weight: 700;
+    padding-left: 0;
+    padding-right: 5px;
+}
+.form-default .is-focused label::after {
+    content: ":";
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.form-default .is-focused select,
+.form-default .is-focused textarea,
+.form-default .is-focused input {
+    background-color: #F0F0F0;
+}
+.form-default .is-focused .form-content-input> [class*="icon-"] ~ label,
+.form-default .is-focused .form-content-select> [class*="icon-"] ~ label,
+.form-default .is-focused .form-content-textarea> [class*="icon-"] ~ label {
+    padding-left: 0;
+}
+.form-default .is-focused .form-content-input::after,
+.form-default .is-focused .form-content-select::after,
+.form-default .is-focused .form-content-textarea::after {
+    width: 100%;
+}
+.form-default .form-hint {
+    line-height: 0.9;
+    margin: 3px 0 0;
+    -moz-transition: opacity .3s;
+    -o-transition: opacity .3s;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    width: 100%;
+    text-align: center;
+    font-size: .875rem;
+    color: rgba(112,112,112,0.8);
+    position: absolute;
+    opacity: 1;
+}
+.display-none{
+    display: none;
+}
+.g-half, .g-half.no-break {
+    float: left;
+    clear: none;
+    text-align: inherit;
+    width: 48.5%;
+    margin-left: 0%;
+    margin-right: 3%;
+}
+.g-half:last-child, .g-half.no-break:last-child {
+    margin-right: 0%;
+}
+.g-half::after,
+.g-half::before{
+    content: '';
+    display: table;
+}
+.g-half::after{
+    clear: both;
+}
+.form-default .form-content-checkbox {
+    overflow: hidden;
+    padding-top: 25px;
+}
+.form-default .form-content-checkbox-item {
+    width: 150px;
+    float: left;
+}
+.form-default .form-content-checkbox-item::before,
+.form-default .form-content-checkbox-item::after {
+    content: '';
+    display: table;
+}
+.form-default .form-content-checkbox-item::after {
+    clear: both;
+}
+.form-default .form-content-checkbox-item label::after {
+    content: '';
+}
+.form-default .form-content-checkbox-item [type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    float: left;
+}
+.form-default .form-content-checkbox-item label {
+    text-align: start;
+    line-height: 25px;
+    font-weight: 400;
+    height: 25px;
+    margin: 0;
+    max-height: 25px;
+    padding: 0;
+    position: relative;
+    top: 2px;
+}
+.form-default .form-content--disabled * {
+    cursor: default;
+    opacity: 0.9;
+}
+.form-default .form-content--disabled label,
+.form-default .form-content--disabled input,
+.form-default .form-content--disabled .form-hint,
+.form-default .form-content--disabled select,
+.form-default .form-content--disabled textarea,
+.form-default .form-content--disabled button {
+    color: #a9a9a9;
+}
+.form-default .form-content--disabled input,
+.form-default .form-content--disabled select,
+.form-default .form-content--disabled textarea  {
+    border-color: #CCCCCC;
+}
+
+.form-default .form-content--disabled .form-content-input:hover,
+.form-default .form-content--disabled .form-content-select:hover,
+.form-default .form-content--disabled .form-content-textarea:hover {
+    background-color: transparent !important;
+}
+
+.form-default .form-content--disabled .form-content-input::after,
+.form-default .form-content--disabled .form-content-select::after,
+.form-default .form-content--disabled .form-content-textarea::after {
+    background-color: transparent  !important;
+}
+/* .form-default .form-content--error * {
+    cursor: default;
+    opacity: 0.9;
+} */
+.form-default .form-content--error label,
+.form-default .form-content--error input,
+.form-default .form-content--error .form-hint,
+.form-default .form-content--error select,
+.form-default .form-content--error textarea,
+.form-default .form-content--error button {
+    color: #FF4053;
+}
+.form-default .form-content--error input,
+.form-default .form-content--error select,
+.form-default .form-content--error textarea  {
+    border-color:  #FF4053;
+}
+
+.form-default .form-content--error .form-content-input:hover,
+.form-default .form-content--error .form-content-select:hover,
+.form-default .form-content--error .form-content-textarea:hover {
+    background-color: transparent !important;
+}
+
+.form-default .form-content--error .form-content-input::after,
+.form-default .form-content--error .form-content-select::after,
+.form-default .form-content--error .form-content-textarea::after {
+    background-color: transparent  !important;
+}
+[data-btn] {
+    -moz-transition: background,.3s,ease;
+    -o-transition: background,.3s,ease;
+    -webkit-transition: background,.3s,ease;
+    transition: background,.3s,ease;
+    text-align: center;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 0;
+    -webkit-appearance: none;
+}
+[data-btn]:hover{
+    text-decoration: none;
+}
+[data-btn] [disabled="disabled"]{
+    opacity: .3;
+}
+[data-btn~="block"] {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+   /* @extend %block-align-center;
+    @extend %full-width;
+*/
+   
+}
+[data-btn~="large"] {
+    font-size: 22px;
+    height: 50px;
+    line-height: 48px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+[data-btn~="default"] {
+    background-color: transparent;
+    border-color: #707070;
+    color: #707070;
+}
+[data-btn~="default"]:not([disabled]):hover {
+    background-color: #707070;
+    color: #ffffff;
+}
+[data-btn~="red"] {
+    background-color: transparent;
+    border-color: #D32F2F;
+    color: #D32F2F;
+}
+[data-btn~="red"]:not([disabled]):hover {
+    background-color: #D32F2F;
+    color: #ffffff;
+}
+
+[data-btn~="green"]:not([disabled]):hover {
+    background-color: #b3eac7;
+}
+
+/* BTN CIRCLE*/
+[data-btn~="circle"] {
+    border-radius: 50%;
+    font-size: 22px;
+
+    border-style:solid;
+    border-width: 1px;
+
+    height: 40px;
+    padding: 0;
+    width: 40px;
+    margin: 0 5px;
+}
+    
+
+[data-btn~="circle"] > i {
+    display: table-cell;
+    width: 38px;
+    vertical-align: top;
+}
+
+
+[data-btn~="circle"][data-btn~="small"] {
+    font-size: 17px;
+    height: 30px;
+    width: 30px
+}
+
+[data-btn~="circle"][data-btn~="small"] > i {
+    line-height: 28px;
+    vertical-align: top;
+}
+
+
+[data-btn~="circle"][data-btn~="primary--inv"] {
+    border-color: #707070;
+}
+
+[data-btn~="circle"][data-btn~="secondary"] {
+    background-color: #FFFFFF;
+    border-color: #707070;
+    color: #707070;
+}
+[data-btn~="circle"][data-btn~="secondary"]:active {
+    background-color: #707070;
+    border-color: #707070;
+    color: #FFFFFF;
+}
+
+[data-btn~="circle"][data-btn~="transparent"] {
+    background-color: transparent;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+}
+[data-btn~="circle"][data-btn~="transparent"]:active {
+    background-color: #707070;
+    border-color: #707070;
+}
+
+[data-btn~="circle"][data-btn~="transparent--inv"] {
+    background-color: transparent;
+    border-color: #707070;
+    color: #707070;
+}
+[data-btn~="circle"][data-btn~="transparent--inv"]:active {
+    background-color: #707070;
+    border-color: #707070;
+    color: #FFFFFF;
+}
+
+[data-btn~="circle"][data-btn~="red"] {
+    font-size: 30px;
+    background-color: transparent;
+    border-color: #D32F2F;
+    color: #D32F2F;
+}
+
+ [data-btn~="circle"][data-btn~="green"] {
+    font-size: 30px;
+    background-color: transparent;
+    border-color:  #00b843;
+    color:  #00b843;
+}

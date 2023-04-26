@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Registro de usuario</title>
+<meta http-equiv="" content="text/html; charset=iso-8859-1">
+<meta http-equiv="" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+.pie {font-family: Tahoma, Geneva, sans-serif;
+	font-size: 9px;
+	color: #FFF;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	text-align: center;
+}
+</style>
+<script type="text/javascript" src="js/functions.js"></script>
+<link href="tabla.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<p align="center"><a href="http://mardelplata-conicet.gob.ar"><img src="cabecera.jpg" width="900" height="101" border="0"></a></p>
+<form name="form1" method="post" action="registro.php">
+	<input type="hidden" name="sAction" id="sAction" value="registro"/>
+	<input type="hidden" name="v" id="v" value="{var_v}"/>
+	<input type="hidden" name="i" id="i" value="{var_i}"/>
+  <p>&nbsp;</p>
+  <table width="32%" border="0" align="center" class="tabla_form">
+    <tr>
+      <td width="200px" align="right"><span style="color:red">*</span> DNI/CUIT</td>
+      <td width="220px">
+		<input name="sCUIT" type="text" onBlur="setVar('iCUIT',this.value);" onchange="setVar('iCUIT',this.value);" maxlength="11">
+		<img id="field_1" src="iconos/noImg_16x16.png" width="16" style="vertical-align:text-bottom;"/>
+	  </td>
+    </tr>
+    <tr>
+      <td align="right">Apellidos</td>
+      <td>
+		<input name="sLastName" type="text" style="width:350px" onBlur="setVar('sApellidos',this.value);" onchange="setVar('sApellidos',this.value);" value="{var_sLastName}">
+	  </td>
+    </tr>
+    <tr>
+      <td align="right">Nombres</td>
+      <td>
+		<input name="sName" type="text" style="width:350px" onBlur="setVar('sNombres',this.value);" onchange="setVar('sNombres',this.value);" value="{var_sName}">
+	  </td>
+    </tr>
+    <tr>
+      <td align="right"><span style="color:red">*</span> Unidad Ejecutora</td>
+      <td>
+		<!--<select name="sUE" onchange="setVar('sUE',this.value);">
+			<!--BEGIN BLOCK UE-->
+			<!--<option value="{var_ID-UE}" {var_Sel-UE}>{var_Desc-UE}</option>
+			<!--END BLOCK UE-->
+		<!--</select>-->
+		<input name="sUE" type="text" style="width:350px" value="{var_sUE}" disabled>
+	  </td>
+    </tr>
+    <tr>
+		<td align="right"><span style="color:red">*</span> E-Mail</td>
+		<td>
+			<input name="sEmail" type="text" style="width:350px" onBlur="setVar('sEmail',this.value);" onchange="setVar('sEmail',this.value);" value="{var_sEmail}">
+			<img id="field_2" src="iconos/noImg_16x16.png" width="16" style="vertical-align:text-bottom;"/>
+		</td>
+    </tr>
+    <tr>
+      <td align="right"><span style="color:red">*</span> Contrase&ntilde;a:</td>
+      <td>
+		<input name="sPass" type="password" onBlur="setVar('sPass',this.value);" onchange="setVar('sPass',this.value);">
+		<img id="field_3" src="iconos/noImg_16x16.png" width="16" style="vertical-align:text-bottom;"/>
+	  </td>
+    </tr>
+    <tr>
+      <td align="right"><span style="color:red">*</span> Repita Contrase&ntilde;a:</td>
+      <td><input name="sPass1" type="password" onBlur="setVar('sPass1',this.value);" onchange="setVar('sPass1',this.value);"></td>
+    </tr>
+	<tr height="30">
+	</tr>
+    <tr>
+      <td colspan="2" style="border: 1px solid #91A6E3; background-color:#C3CBE3; padding:12px; font-size:11px">
+		<b>IMPORTANTE:</b><br/><br/>
+		<span style="margin-left:60px;">Los campos marcados con (<span style="color:red;font-size:20px;vertical-align:top">*</span>) son obligatorios.</span><br/>
+		<span style="margin-left:60px;">Los datos que Ud. ingrese serán verificados antes de habilitarlo como usuario, y se le notificar&aacute; mediante un correo electr&oacute;nico a la casilla que aqu&iacute; se especifique.</span>
+	  </td>
+    </tr>
+  </table>
+  <div align="center"></div>
+  <p align="left" style="margin-left:818px"> 
+    <!--<input type="submit" name="Submit" value="Registrar">-->
+    <input type="button" name="Submit" onclick="validaCampos();" value="Registrar">
+	<input type="button" name="cancelar" onclick="window.open('index.php','_self');" value="Cancelar">
+  </p>
+  </form>
+ <p>
+   <script>
+	document.form1.sUserName.focus();
+   </script> 
+ </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+   <tr>
+     <td colspan="3" bgcolor="#000033" class="pie">Copyright &copy; 2010 CCT Mar del Plata. Todos los derechos reservados.</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<?php include "includes/header.php";?>
+<html>
+<head>
+<title>PANEL CONTROL - MODULOS</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<style type="text/css">
+.tituloweb2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #06C;
+	font-weight: bold;
+	line-height: 10px;
+}
+.tituloweb2Copia {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #06C;
+	font-weight: normal;
+	line-height: 10px;
+}
+
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+	text-align: right;
+}
+.cerrar {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 9px;
+	color: #333;
+}
+.pie {	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 9px;
+	color: #FFF;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	text-align: center;
+}
+.divIcon{
+	float:left;
+	margin:10px;
+	width:125px;
+}
+
+.imgIcon{
+	width:55px;
+	height:55px;
+}
+</style>
+</head>
+<body>
+<p align="center">
+	<img src="cabecera.jpg" width="900" height="101" border="0" usemap="#Map">
+</p>
+<table width="898" height="346" border="0" align="center" cellpadding="0">
+	<tr align="right" valign="top">
+		<td colspan="10" width="552">
+			<a href="{var_linkBack}" class="tituloweb2Copia" style="font-weight:bold; font-size:10px">{var_sBack}</a>
+		</td>
+	</tr>
+	<tr class="cerrar" >
+		<td>
+			<strong> 
+				<img src="images/bullet20.gif" width="9" height="9" /> {var_user}
+				<a href="index.php?salir=1"><img width="20" style="vertical-align: middle;" src="images/1353101328_logout.png"/></a>
+			</strong>
+			<p>&nbsp;</p>
+		</td>
+		<td width="722" rowspan="4" align="center" valign="top">
+			<a href="index.php?salir=1"></a>
+			<div width="610" height="422">
+			<!--BEGIN BLOCK REG-->
+				<div class="divIcon">
+					<a href="{var_link}">
+						<img src="{var_icono}" class="imgIcon" vspace="4" border="0" />
+					</a>
+					<br />
+					<a href="{var_link}" class="tituloweb2Copia">{var_nombre}</a>
+				</div>
+			<!--END BLOCK REG-->
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td width="170" valign="top" background="images/divisor-columna.jpg" bgcolor="#FFFFFF" class="tituloweb2" style="background-repeat: no-repeat; background-position: right;">
+vání!!
+			<!--BEGIN BLOCK PC-->
+				<div class="divIcon" style="text-align:center">
+					<a href="{var_linkPC}">
+						<img src="{var_iconoPC}" class="imgIcon" vspace="4" border="0" />
+					</a>
+					<br />
+					<a href="{var_linkPC}" class="tituloweb2Copia">{var_nombrePC}</a>
+				</div>
+			<!--END BLOCK PC-->
+		</td>
+	</tr>
+</table>
+<table width="900" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="3" bgcolor="#000033" class="pie">Copyright &copy; 2010 CCT Mar del Plata. Todos los derechos reservados.</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,141 @@
+.tituloweb2 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #06C;
+	font-weight: bold;
+	line-height: 10px;
+}
+.tituloweb2Copia {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #06C;
+	font-weight: normal;
+	line-height: 10px;
+}
+
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+	text-align: right;
+}
+.cerrar {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 9px;
+	color: #333;
+}
+.pie {	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 9px;
+	color: #FFF;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	text-align: center;
+}
+.TITULO {font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #333;
+	font-variant: normal;
+	font-weight: bold;
+	text-align: center;
+	padding-left: 5px;
+	padding-right: 30px;
+	vertical-align: bottom;
+	padding-bottom: 10px;
+}
+.hidden {
+	display: none;
+}
+/************************ALERTBOX**********************************/
+
+.m-alertbox-animation {
+	left: 0;
+	top: 0;
+    opacity: 1;
+    position: fixed;
+	z-index: 100;
+	width: 100%;
+}
+.m-alertbox {
+	background-color: #F0F0F0;
+    color:  #707070;
+    height: 60px;
+
+}
+.m-alertbox p {
+	padding-left: 20px;
+    text-align: center;
+}
+.m-alertbox p strong {
+	line-height: 1.5;
+	vertical-align: top;
+}
+.m-alertbox-countdown {
+	opacity: 0.6;
+	padding: 0 5px;
+	text-align: right;
+	width: 20px;
+}
+.m-alertbox-container {
+    display: table;
+    width: 100%;
+    height: 100%;
+
+}
+.m-alertbox-container > * {
+	display: table-cell;
+	vertical-align: middle;
+}
+.m-alertbox button {
+	background: inherit;
+	border: 0;
+	color: inherit;
+	height: 60px;
+	padding: 0;
+	width: 60px;
+	cursor: pointer;
+}
+.m-alertbox button >span {
+	line-height: 60px;
+}
+.m-alertbox-icon {
+    text-align: center;
+
+	font-size: 40em;
+	font-weight: 400;
+    line-height: normal;
+    padding: 0;
+    width: 60px;
+    vertical-align: top;
+}
+.m-alertbox-icon  > span {
+	line-height: 60px;
+}
+.m-alertbox--success {
+    background: #8BC34A;
+    color: #FFFFFF;
+}
+.m-alertbox--success button {
+	background: #8BC34A;
+}
+.m-alertbox--success button:hover {
+	background-color: #558B2F;
+}
+.m-alertbox--error {
+    background: #F44336;
+    color: #FFFFFF;
+}
+.m-alertbox--error button {
+	background-color: #F44336;
+}
+.m-alertbox--error button:hover {
+	background-color: #C62828;
+}
