@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/conicet/public_html/intraGit
+    - /bin/cp -R code $DEPLOYPATH
