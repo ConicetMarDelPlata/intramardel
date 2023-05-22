@@ -92,12 +92,14 @@ function enviar(inForm){
 			alert("Por favor, complete el CUIT.");
 			inForm.cuit.focus();			
 		}
-		else if ((cuit != "") && !(validaCuit(cuit))){
-			alert("El CUIT es demasiado corto o no coincide su digito verificador. Verifique los datos.");
-			inForm.cuit.style="border-color:red;";
-			inForm.cuit.focus();
-		}
-		else if ((cuit != "") && !(buscarCUITDuplicado(cuit, inForm.id_proveedor.value))){
+		else if ((condicion_iva != 4) && (condicion_iva != 5)){
+			if ((cuit != "") && !(validaCuit(cuit))){
+				alert("El CUIT es demasiado corto o no coincide su digito verificador. Verifique los datos.");
+				inForm.cuit.style="border-color:red;";
+				inForm.cuit.focus();
+			}
+		} 		
+		if ((cuit != "") && !(buscarCUITDuplicado(cuit, inForm.id_proveedor.value))){
 			alert("El CUIT se encuentra previamente registrado como proveedor. Verifique los datos.");
 			inForm.cuit.focus();
 			inForm.cuit.style="border-color:red;";
@@ -106,7 +108,7 @@ function enviar(inForm){
 		else if (razon_social == "") {
 			alert("Por favor, complete la razon social.");
 			inForm.razon_social.focus();
-			}
+		}
 		else if (nroIIBB == "" && (condicion_iva != 4 && condicion_iva != 5)) {
 			//IIBB solo es requerido si no es extranjero o consumidor final
 			alert("Por favor, complete el numero de ingresos brutos.");
@@ -120,7 +122,7 @@ function enviar(inForm){
 		else {
 			inForm.submit();
 		}
-		}
+	}
 	//============== DESCOMENTAR ESTE BLOQUE PARA HACER CHEQUEO ===============================
 		// if ( cuit == "" || razon_social == "" || condicion_iva == "" || provincia == ""){
 			// alert("Campos obligatorios INCOMPLETOS.");
