@@ -111,7 +111,7 @@ if($vTasks){
 			mesadeentradas@mardelplata-conicet.gob.ar,victoriaganuza@gmail.com";
 				error_log("Mails: ".$to);         
 	// More headers
-	$from = 'CCT CONICET Mar Del Plata<fileserver.conicet@gmail.com>';
+	$from = 'CCT CONICET Mar Del Plata<notificaciones.conicet.mdp@gmail.com>';
 	
 	$to = "victoriaganuza@gmail.com,mibello@conicet.gov.ar"; //, sps_mdq@hotmail.com
 	

@@ -49,7 +49,7 @@
 		require_once "Mail.php";
 		require_once "Mail/mime.php";    
 	 	$crlf = "\n";
-		$from = 'CCT CONICET Mar Del Plata <fileserver.conicet@gmail.com>';
+		$from = 'CCT CONICET Mar Del Plata <notificaciones.conicet.mdp@gmail.com>';
 
 		 // create a new Mail_Mime for use
 		 $mime = new Mail_mime($crlf); 
@@ -78,8 +78,8 @@
 		 $password = "n0r3sp0nd3r";*/
 		 $host = "smtp.gmail.com";
 		 $port    =  "587";
-		 $username = "fileserver.conicet@gmail.com";
-		 $password = "pnbddgskqynharxa";
+		 $username = "notificaciones.conicet.mdp@gmail.com";
+		 $password = "pxtffyhjjfqscpwg";
 		 
 		 $headers = array ('From' => $from,
 		  		'To' => $to,

@@ -112,14 +112,14 @@ function SendMailPHPMailer($to,$cc,$subject,$body,$attach,&$error) {
 		 $mime->addHTMLImage(file_get_contents($image),mime_content_type($image),basename($image),false);
 		 // specify the SMTP server credentials to be used for delivery
 		 // if using a third party mail service, be sure to use their hostname
-		 $host = "ssl://mail.mardelplata-conicet.gob.ar";
+		 /*$host = "ssl://mail.mardelplata-conicet.gob.ar";
 		 $port    =  "465"; //con el 587 465 (ssl) no funcionaba
 		 $username = "no-reply@mardelplata-conicet.gob.ar";
-		 $password = "n0r3sp0nd3r";
-		 /*$host = "smtp.gmail.com";
+		 $password = "n0r3sp0nd3r";*/
+		 $host = "smtp.gmail.com";
 		 $port    =  "587";
-		 $username = "fileserver.conicet@gmail.com";
-		 $password = "FILE32SERVER67";*/
+		 $username = "notificaciones.conicet.mdp@gmail.com";
+		 $password = "pxtffyhjjfqscpwg";
 		 
 		 $headers = array ('From' => $from,
 		  		'To' => $to,

@@ -156,7 +156,7 @@ function sendReleaseEmail($reserva,$user,$remover){
     $to = $user['userEmail'] . ", ";
     $to .= $sCC;
     // More headers
-    $from = 'CCT CONICET Mar Del Plata<fileserver.conicet@gmail.com>';
+    $from = 'CCT CONICET Mar Del Plata<notificaciones.conicet.mdp@gmail.com>';
     if ($oEmail->send_email($to,$from,$subject, $message,$_SERVER['DOCUMENT_ROOT']."/intranet/fichador/fichador/imagenes/conicet120px.jpg"))
         return true;
     else 

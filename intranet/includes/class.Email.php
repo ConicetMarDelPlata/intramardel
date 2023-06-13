@@ -40,8 +40,8 @@
 			// if using a third party mail service, be sure to use their hostname
 			$host = "smtp.gmail.com";
 			$port    =  "587";
-			$username = "fileserver.conicet@gmail.com";
-			$password = "pnbddgskqynharxa";
+			$username = "notificaciones.conicet.mdp@gmail.com";
+			$password = "pxtffyhjjfqscpwg";
 			//$password = "FILE32SERVER67";
 			
 			$headers = array ('From' => $from,
