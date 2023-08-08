@@ -5180,8 +5180,10 @@
 					$lnkmodificar_orden_pago = '#';
 					$lnkborrar_orden_pago = '#';
 				}
+				$fecha = new DateTime($row['fecha']);
+				$fecha_base = new DateTime('2023-07-01');
 				$lnkimprimir_orden_pago = 'orden_pago_pdf.php?numero_orden_pago='   . $nroOP . '&fecha='.convertir_fecha($row['fecha']).'&anio_numero_orden_pago='.$yearOP.'&confecciono='.rawurlencode($row['confecciono']).'&proveedor='.$row['proveedor'];
-				if($this->isRetentionAgent($row['id_unidad_ejecutora']) && (int)$row['cert_ret'] != 0){//&& $this->availRetention($row['proveedor']) 
+				if(($this->isRetentionAgent($row['id_unidad_ejecutora']) || ($fecha < $fecha_base))  && (int)$row['cert_ret'] != 0){//&& $this->availRetention($row['proveedor']) 
 					$lnkimprimir_retenciones = 'recibo_retencion_pdf.php?numero_orden_pago='   . $nroOP .'&anio_numero_orden_pago='.$yearOP.'&confecciono='.rawurlencode($row['confecciono']);
 				}else{
 					$lnkimprimir_retenciones = "#";
@@ -5214,7 +5216,7 @@
 
 				echo '<td align="center"><font color="#333333"><a target="_blank" href=' . $lnkimprimir_orden_pago.  '><img src="acrobat.png" width="30" height="30" border="0" title="Imprimir Orden Pago"></a></td>';
 
-				if($this->isRetentionAgent($row['id_unidad_ejecutora']) && $this->availRetention($row['proveedor']) && (int)$row['cert_ret'] != 0){
+				if(($this->isRetentionAgent($row['id_unidad_ejecutora']) || ($fecha < $fecha_base))  && $this->availRetention($row['proveedor']) && (int)$row['cert_ret'] != 0){
 					echo '<td align="center"><font color="#333333"><a target="_blank" href=' . $lnkimprimir_retenciones.  '><img src="arba.png" width="30" height="30" border="0" title="Imprimir Recibo de Retenciones"></a></td>';
 				}else{
 					echo '<td align="center"><font color="#333333"><a href=' . $lnkimprimir_retenciones.  '><img src="iconos_grises/no_arba.png" width="30" height="30" border="0" title="Imprimir Recibo de Retenciones"></a></td>';
