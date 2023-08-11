@@ -113,7 +113,7 @@ if($vTasks){
 	$to = "victoriaganuza@gmail.com"; //, sps_mdq@hotmail.com
 	
 	if ($email->send_email ($to,$from,$subject, $message,dirname( __FILE__ )."/images/conicet120px.jpg")){
-		//$conference->mail_sent($vTasks);
+		$conference->mail_sent($vTasks);
 		escribirLog(date("d/m/Y - H:i:s.- ") . " Aviso de reservas enviado! \r\n");
 	}
 	else {
