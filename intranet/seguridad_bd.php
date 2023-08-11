@@ -1448,11 +1448,17 @@
             return $contrasenia == $row['contrasenia'];
           } else
           {
-            return password_verify($contrasenia, $row['contrasenia']);
+						$rta = password_verify($contrasenia, $row['contrasenia']);
+						if ($rta) {
+							escribirLog(date("d/m/Y - H:i:s.- ") .'Verifica'." \r\n");
+						} else {
+							escribirLog(date("d/m/Y - H:i:s.- ") .'NO Verifica'." \r\n");
+						}
+            return $rta;
           }
         } catch (exception $e) {
-					error_log('En el Catch');
-          error_log($e->getMessage());
+					escribirLog(date("d/m/Y - H:i:s.- ") .'En el Catch'." \r\n");
+          escribirLog(date("d/m/Y - H:i:s.- ") . $e->getMessage()." \r\n");
         }
     }
 		
