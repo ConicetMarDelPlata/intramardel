@@ -54,7 +54,7 @@
 	if($vUE){
 		$sBlock = $oTpl->beginBlock("UE");
 		foreach($vUE as $Item){
-			if((int)$Item['agente_retencion'] == 1){
+			//if((int)$Item['agente_retencion'] == 1){
 				$vVars = array(
 					'iUE'=>$Item['id_unidad_ejecutora'], 
 					'sUE'=>$Item['nombre'],
@@ -62,7 +62,7 @@
 				);
 				$oTpl->addToBlock($sBlock,$vVars);
 				$vVars=null;
-			}
+			//}
 		}
 		$oTpl->endBlock($sBlock);
 	}else{
