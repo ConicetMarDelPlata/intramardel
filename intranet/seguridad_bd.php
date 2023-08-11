@@ -32,6 +32,11 @@
 	}
 
 
+	function escribirLog ($textoAAgregar) {
+		$textoAAgregar .= file_get_contents('../errorLog.log');
+		file_put_contents('../errorLog.log', $textoAAgregar);
+	}
+
 	/**
 	 * send_email
 	 * Sends mail via SMTP
@@ -1425,6 +1430,9 @@
       //Actualizado a PHP > 7 
       //Victoria Ganuza
       //Fecha: 20/09/2022
+
+			escribirLog(date("d/m/Y - H:i:s.- ") . " en usuario_registrado. Contraseña: ".$contrasenia." \r\n");
+
 
       $q = 'SELECT 
           * 
