@@ -5,8 +5,8 @@ include_once("./includes/class.Email.php");
 include_once("seguridad_bd.php");
 
 function escribirLog ($textoAAgregar) {
-	$textoAAgregar .= file_get_contents('envioReservas.log');
-	file_put_contents('envioReservas.log', $textoAAgregar);
+	$textoAAgregar .= file_get_contents('../envioReservas.log');
+	file_put_contents('../envioReservas.log', $textoAAgregar);
 }
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
