@@ -3,8 +3,8 @@
 include_once "seguridad_bd.php";
 
 function escribirLog ($textoAAgregar) {
-	$textoAAgregar .= file_get_contents('envioAvisosPago.log');
-	file_put_contents('envioAvisosPago.log', $textoAAgregar);
+	$textoAAgregar .= file_get_contents('../envioAvisosPago.log');
+	file_put_contents('../envioAvisosPago.log', $textoAAgregar);
 }
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
@@ -169,7 +169,7 @@ while (($op = mysqli_fetch_assoc($ordenes)) and ($emailsCount<=80)){
 
 	$cc = "victoriaganuza@gmail.com"; //, mibello@conicet.gov.ar
 	$cco = "victoriaganuza@gmail.com"; //mibello@conicet.gov.ar
-	$to ="victoriaganuza@gmail.com,vicdepatas@gmail.com";
+	$to ="victoriaganuza@gmail.com,vicdepatas@gmail.com";/**/
 
 	if ($mess = send_email ($to,$cc,$cco,$subject,$message,dirname( __FILE__ )."/images/conicet120px.jpg",$recibo_retencion)){
 		escribirLog(date("d/m/Y - H:i:s.- ") . " Aviso de pago enviado! OP: ".$op['numero_orden_pago']."/".$op['anio_numero_orden_pago']." \r\n");

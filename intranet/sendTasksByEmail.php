@@ -102,15 +102,15 @@ if($vTasks){
 	</tr>
 	</table></body></html>";
 
-	//$to = "victoriaganuza@gmail.com,victoria.ganuza@frasal.uy"; //, sps_mdq@hotmail.com
+	//$to = "victoriaganuza@gmail.com,victoria.ganuza@frasal.uy"; //, sps_mdq@hotmail.com,victoriaganuza@gmail.com
 	$to = "mibello@conicet.gov.ar,giacconecarla@conicet.gov.ar,drodriguez@conicet.gov.ar,acarricart@conicet.gov.ar,comunicacion@mardelplata-conicet.gob.ar,prensa@mardelplata-conicet.gob.ar,
 			amoyano@conicet.gov.ar,administracion@mardelplata-conicet.gob.ar,recursoshumanos@mardelplata-conicet.gob.ar,rrhh@mardelplata-conicet.gob.ar,cct@mardelplata-conicet.gob.ar,
-			mesadeentradas@mardelplata-conicet.gob.ar,victoriaganuza@gmail.com";
+			mesadeentradas@mardelplata-conicet.gob.ar";
 				error_log("Mails: ".$to);         
 	// More headers
 	$from = 'CCT CONICET Mar Del Plata<notificaciones.conicet.mdp@gmail.com>';
 	
-	$to = "victoriaganuza@gmail.com"; //, sps_mdq@hotmail.com
+	//$to = "victoriaganuza@gmail.com"; //, sps_mdq@hotmail.com
 	
 	if ($email->send_email ($to,$from,$subject, $message,dirname( __FILE__ )."/images/conicet120px.jpg")){
 		$conference->mail_sent($vTasks);
