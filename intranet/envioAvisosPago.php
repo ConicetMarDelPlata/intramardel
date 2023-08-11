@@ -167,9 +167,9 @@ while (($op = mysqli_fetch_assoc($ordenes)) and ($emailsCount<=80)){
 		$recibo_retencion = 'recibosRetencion/reciboRetencion'.$op['cert_ret'].'.pdf';
 	}
 
-	$cc = "victoriaganuza@gmail.com"; //, mibello@conicet.gov.ar
+	/*$cc = "victoriaganuza@gmail.com"; //, mibello@conicet.gov.ar
 	$cco = "victoriaganuza@gmail.com"; //mibello@conicet.gov.ar
-	$to ="victoriaganuza@gmail.com,vicdepatas@gmail.com";/**/
+	$to ="victoriaganuza@gmail.com,vicdepatas@gmail.com";*/
 
 	if ($mess = send_email ($to,$cc,$cco,$subject,$message,dirname( __FILE__ )."/images/conicet120px.jpg",$recibo_retencion)){
 		escribirLog(date("d/m/Y - H:i:s.- ") . " Aviso de pago enviado! OP: ".$op['numero_orden_pago']."/".$op['anio_numero_orden_pago']." \r\n");

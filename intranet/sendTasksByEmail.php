@@ -36,8 +36,8 @@ $dia = date('d',strtotime($sFecha));
 $mes = date('m',strtotime($sFecha));
 $year = date('Y',strtotime($sFecha));
 
-$vTasks = $conference->getAllReservations('09','08','2022');
-//$vTasks = $conference->getAllReservations($dia,$mes,$year);
+//$vTasks = $conference->getAllReservations('09','08','2022');
+$vTasks = $conference->getAllReservations($dia,$mes,$year);
 error_log(json_encode($vTasks));
 if($vTasks){
 	$message = "<html><head><title>Reservas de Sala</title></head>
