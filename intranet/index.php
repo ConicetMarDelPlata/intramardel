@@ -57,7 +57,6 @@ format("svg");font-weight:400;font-style:normal}.dashicons,.dashicons-before:bef
 	<body class="login login-action-login wp-core-ui  locale-es-es">
     <div id="custom-logo"><img border="0" src="images/conicetlogin.png"></div>
 		<div id="login">
-		<p style="color: red; font-size: 20px">Este es un ambiente de prueba</p>
 	
 <form name="form1" method="post" action="login.php">
 	<p>

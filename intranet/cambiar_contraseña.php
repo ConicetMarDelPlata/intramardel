@@ -58,7 +58,6 @@ format("svg");font-weight:400;font-style:normal}.dashicons,.dashicons-before:bef
     <div id="custom-logo"><img border="0" src="images/conicetlogin.png"></div>
 		<div id="login">
 		<h2>Actualizar contraseña</h2>
-		<p style="color: red; font-size: 20px">Este es un ambiente de prueba</p>
 	
 <form name="form1" method="post" action="nuevo_password.php">
 	<p>
