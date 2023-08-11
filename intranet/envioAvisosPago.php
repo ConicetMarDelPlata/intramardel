@@ -69,9 +69,6 @@ while (($op = mysqli_fetch_assoc($ordenes)) and ($emailsCount<=80)){
 			</td>
 		</tr>
 		<tr>
-			<td class='headerList' colspan=5 style=\"background-color:rgb(255, 0, 0);color:white;text-align:center;font-size:17px;padding-top:2px;padding-bottom:2px;padding-right:10px;padding-left:10px;\" >Mail Servidor de Prueba</td>
-		</tr>
-		<tr>
 			<td style=\"text-align: right;margin-right: 1em;\" colspan=2>
 				Mar del Plata, ".htmlentities($dia)." de $nombreMes de $anio
 				<br>
