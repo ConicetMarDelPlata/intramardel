@@ -75,9 +75,6 @@ if($vTasks){
 	<td colspan=4 style=\"text-align:left;padding-left:10px;font-size:13px;\" >CCT CONICET Mar Del Plata</td>
 	</tr>
 	<tr>
-	<td class='headerList' colspan=5 style=\"background-color:rgb(255, 0, 0);color:white;text-align:center;font-size:17px;padding-top:2px;padding-bottom:2px;padding-right:10px;padding-left:10px;\" >Mail Servidor de Prueba</td>
-	</tr>
-	<tr>
 	<td class='headerList' colspan=5 style=\"background-color:rgb(89, 146, 196);color:white;text-align:center;font-size:17px;padding-top:2px;padding-bottom:2px;padding-right:10px;padding-left:10px;\" >Listado de reservas del d&iacute;a ".$dia."/".$mes.'/'.$year."				</td>
 	</tr>
 	<tr>

@@ -57,7 +57,8 @@ format("svg");font-weight:400;font-style:normal}.dashicons,.dashicons-before:bef
 	<body class="login login-action-login wp-core-ui  locale-es-es">
     <div id="custom-logo"><img border="0" src="images/conicetlogin.png"></div>
 		<div id="login">
-	
+			
+	<!--	<p  align="center">Temporalmente suspendido. Utilice por favor la intranet local.</p>
 <form name="form1" method="post" action="login.php">
 	<p>
 		<label for="user_login">Nombre de usuario<br />
@@ -66,16 +67,16 @@ format("svg");font-weight:400;font-style:normal}.dashicons,.dashicons-before:bef
 	<p>
 		<label for="user_pass">Contraseña<br />
 		<input type="password" name="contrasenia" id="contrasenia2" class="input" value="" /></label>
-	</p>
-		<!--<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> Recuérdame</label></p>-->
+	</p>-->
+		<!--<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"  /> Recuérdame</label></p>
 	<p class="error"><?php echo isset($_GET['m']) ?  'Usuario o Contraseña incorrecta' :  '' ?></p>
 	<p class="submit">
 		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Acceder" />
 		<input type="hidden" name="redirect_to" value="#" />
 		<input type="hidden" name="testcookie" value="1" />
 	</p>
-</form>
-<!--<p  align="center">Temporalmente suspendido. Utilice por favor la intranet local.</p>-->
+</form>-->
+<p  align="center" style="font-size: 20px; color:red">Temporalmente suspendido. <br/>Estamos moviendo la intranet de servidor.</p>
 
 <!--<p id="nav">
 	<a href="http://mardelplata-conicet.gob.ar/wp-login.php?action=lostpassword">¿Has perdido tu contraseña?</a>
