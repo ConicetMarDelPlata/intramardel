@@ -36,8 +36,8 @@ $dia = date('d',strtotime($sFecha));
 $mes = date('m',strtotime($sFecha));
 $year = date('Y',strtotime($sFecha));
 
-//$vTasks = $conference->getAllReservations('09','08','2022');
-$vTasks = $conference->getAllReservations($dia,$mes,$year);
+$vTasks = $conference->getAllReservations('09','08','2022');
+//$vTasks = $conference->getAllReservations($dia,$mes,$year);
 error_log(json_encode($vTasks));
 if($vTasks){
 	$message = "<html><head><title>Reservas de Sala</title></head>
@@ -113,10 +113,10 @@ if($vTasks){
 	// More headers
 	$from = 'CCT CONICET Mar Del Plata<notificaciones.conicet.mdp@gmail.com>';
 	
-	$to = "victoriaganuza@gmail.com,mibello@conicet.gov.ar"; //, sps_mdq@hotmail.com
+	$to = "victoriaganuza@gmail.com"; //, sps_mdq@hotmail.com
 	
 	if ($email->send_email ($to,$from,$subject, $message,dirname( __FILE__ )."/images/conicet120px.jpg")){
-		$conference->mail_sent($vTasks);
+		//$conference->mail_sent($vTasks);
 		escribirLog(date("d/m/Y - H:i:s.- ") . " Aviso de reservas enviado! \r\n");
 	}
 	else {
