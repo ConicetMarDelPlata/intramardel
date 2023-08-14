@@ -164,7 +164,7 @@ while (($op = mysqli_fetch_assoc($ordenes)) and ($emailsCount<=80)){
 		$_GET['toFile']='F';
 		include ("recibo_retencion_pdf.php");
 		//echo 'recibo_retencion_pdf.php?numero_orden_pago='.$op['numero_orden_pago'].'&anio_numero_orden_pago='.$op['anio_numero_orden_pago'].'&confecciono='.rawurlencode($op['confecciono']).'&toFile=F';
-		$recibo_retencion = 'recibosRetencion/reciboRetencion'.$op['cert_ret'].'.pdf';
+		$recibo_retencion = '../recibosRetencion/reciboRetencion'.$op['cert_ret'].'.pdf';
 	}
 
 	/*$cc = "victoriaganuza@gmail.com"; //, mibello@conicet.gov.ar

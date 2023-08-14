@@ -141,7 +141,7 @@ $pdf->Cell(0, 5, 'Confeccionada por: ' . ($confecciono), 0, false, 'C', 0, '', 0
 //Close and output PDF document
 //$pdf->Output('recibo_retencion.pdf', 'D');
 if (isset($_GET['toFile']) and ($_GET['toFile']=='F')) {
-	$pdf->Output(__DIR__ . '/recibosRetencion/reciboRetencion'.$row_orden_pago['cert_ret'].'.pdf', 'F');			
+	$pdf->Output(__DIR__ . '/../recibosRetencion/reciboRetencion'.$row_orden_pago['cert_ret'].'.pdf', 'F');			
 } else {
 	$pdf->Output(__DIR__ . '/reciboRetencion'.$row_orden_pago['cert_ret'].'.pdf');
 }
