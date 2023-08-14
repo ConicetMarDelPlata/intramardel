@@ -1,5 +1,9 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/conicet/public_html
-    - /bin/cp -R intranet $DEPLOYPATH
+    - export DEPLOYPATH=/home/conicet/public_html/prueba
+    - export REPOPATH=/home/conicet/repositories/intermardel
+    #- /bin/cp -R intranet $DEPLOYPATH
+    # Sync repository files to the deploy target path, excluding .git folder.
+    # --delete-after will remove deleted files and folders after syncing.
+    - /bin/rsync -aP --exclude '.git' --exclude 'intranet/ad_pdf' --exclude 'intranet/recibosRetencion' ${REPOPATH}/ ${DEPLOYPATH} --delete-after
