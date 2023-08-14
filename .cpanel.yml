@@ -2,6 +2,8 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/conicet/public_html/prueba
+    - export DEPLOYRECIBOS=/home/conicet/public_html/recibosRetencion
     #- export REPOPATH=/home/conicet/repositories/intermardel
     #- /bin/cp -R intranet $DEPLOYPATH
-    - /bin/cp -R intranet/!(recibosRetencion|ad_pdf) $DEPLOYPATH
+    - /bin/cp -R intranet/recibosRetencion $DEPLOYPATH
+    - /bin/cp -R intranet $DEPLOYPATH
