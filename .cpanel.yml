@@ -4,6 +4,4 @@ deployment:
     - export DEPLOYPATH=/home/conicet/public_html/prueba
     #- export REPOPATH=/home/conicet/repositories/intermardel
     #- /bin/cp -R intranet $DEPLOYPATH
-    # Sync repository files to the deploy target path, excluding .git folder.
-    # --delete-after will remove deleted files and folders after syncing.
-    - /bin/cp /intranet/!(recibosRetencion|ad_pdf) $DEPLOYPATH
+    - /bin/cp -R intranet/!(recibosRetencion|ad_pdf) $DEPLOYPATH
