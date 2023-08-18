@@ -32,10 +32,10 @@
 	}
 
 
-	function escribirLog ($textoAAgregar) {
+	/* function escribirLog ($textoAAgregar) {
 		$textoAAgregar .= file_get_contents('../errorLog.log');
 		file_put_contents('../errorLog.log', $textoAAgregar);
-	}
+	} */
 
 	/**
 	 * send_email
@@ -1431,7 +1431,7 @@
       //Victoria Ganuza
       //Fecha: 20/09/2022
 
-			escribirLog(date("d/m/Y - H:i:s.- ") . " en usuario_registrado. Contraseña: ".$contrasenia." \r\n");
+			//escribirLog(date("d/m/Y - H:i:s.- ") . " en usuario_registrado. Contraseña: ".$contrasenia." \r\n");
 
 
       $q = 'SELECT 
@@ -1449,16 +1449,17 @@
           } else
           {
 						$rta = password_verify($contrasenia, $row['contrasenia']);
-						if ($rta) {
+						/* if ($rta) {
 							escribirLog(date("d/m/Y - H:i:s.- ") .'Verifica'." \r\n");
 						} else {
 							escribirLog(date("d/m/Y - H:i:s.- ") .'NO Verifica'." \r\n");
-						}
+						} */
             return $rta;
           }
         } catch (exception $e) {
-					escribirLog(date("d/m/Y - H:i:s.- ") .'En el Catch'." \r\n");
-          escribirLog(date("d/m/Y - H:i:s.- ") . $e->getMessage()." \r\n");
+					echo $e->getMessage();
+					/* escribirLog(date("d/m/Y - H:i:s.- ") .'En el Catch'." \r\n");
+          escribirLog(date("d/m/Y - H:i:s.- ") . $e->getMessage()." \r\n"); */
         }
     }
 		

@@ -3,8 +3,8 @@
 include_once "seguridad_bd.php";
 
 function escribirLog ($textoAAgregar) {
-	$textoAAgregar .= file_get_contents('../envioAvisosPago.log');
-	file_put_contents('../envioAvisosPago.log', $textoAAgregar);
+	$textoAAgregar .= file_get_contents('envioAvisosPago.log');
+	file_put_contents('envioAvisosPago.log', $textoAAgregar);
 }
 date_default_timezone_set('America/Argentina/Buenos_Aires');
 
