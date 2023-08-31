@@ -366,20 +366,20 @@
 				if($sWhereTrim){
 					$sWhereTrim .=" AND adi.fecha_compra <= '$iTrimFin'";
 				}else{
-					$sWhereTrim =" adi.fecha_compra <= '$iTrimFin'";
+					$sWhereTrim =" AND adi.fecha_compra <= '$iTrimFin'";
 				}
 			}else{
 				if($iTrimFin){
 					if($sWhereTrim){
 						$sWhereTrim .=" AND MONTH(fecha_cierre) <= $iTrimFin";
 					}else{
-						$sWhereTrim =" MONTH(fecha_cierre) <= $iTrimFin";
+						$sWhereTrim =" AND MONTH(fecha_cierre) <= $iTrimFin";
 					}
 				}
 			}
 			
 			if($iYear){
-				$sWhereYear = " AND YEAR(fecha_cierre) = $iYear AND";
+				$sWhereYear = " AND YEAR(fecha_cierre) = $iYear";
 			}else{
 				$sWhereYear = "";
 			}

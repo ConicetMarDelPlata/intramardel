@@ -219,71 +219,71 @@ $vData		= $bd->getDCPTData($sFIni,$sFFin,null,$iUE);
 //echo "<pre>";
 //var_dump($vData);
 
+// add a page
+$pdf->AddPage('L');
+$pdf->Ln(7);
+$pdf->SetFont('Helvetica', '', 7);
+$pdf->Ln();
+$pdf->SetFillColor(192,192,192);
+$w = 40;
+
+$tbl_header='
+<style>
+table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		padding-bottom: 2px;
+		padding-left: 5px;
+		padding-top: 2px;
+}
+tr {
+		padding-bottom: 5px;
+		padding-left: 0px;
+		padding-top: 2px;
+		border:1px;
+		border-color:#000000;
+}
+th {
+		background-color: #AAAAAA;
+		color: #000000;
+		font-family: Helvetica;
+		font-weight: bold;
+		padding-bottom: 2px;
+		padding-top: 2px;
+		text-align: left;
+		border: 1px solid #CCCCCC;
+		vertical-align: middle;
+}
+td {
+		color: #000000;
+		padding-bottom: 2px;
+		padding-top: 2px;
+		border: 1px solid #CCCCCC;
+		vertical-align: middle;
+}
+</style>
+
+<table style="border: 1px solid #CCCCCC" valign="middle">
+	<tr>
+		<th style="width:30px;text-align:center" valign="middle">Ord.</th>
+		<th style="width:35px;text-align:center">Cant.</th>
+		<th style="width:50px;text-align:center">ID</th>
+		<th style="width:250px;text-align:center">Descripción</th>
+		<th style="width:100px;text-align:center">Marca</th>
+		<th style="width:95px;text-align:center">Modelo</th>
+		<th style="width:115px;text-align:center">Serie</th>
+		<th style="width:60px;text-align:center">F.Compra</th>
+		<th style="width:80px;text-align:right">Importe</th>
+		<th style="width:160px;textsLastUE-align:center">Titular</th>
+	</tr>';
+
+$tbl_footer="</table>";
+$i = 0;
+$sLastUE = '';
+$sUE='';
+$tbl_content='';
+$fTotal=0;
 if($vData){
-	// add a page
-	$pdf->AddPage('L');
-	$pdf->Ln(7);
-	$pdf->SetFont('Helvetica', '', 7);
-	$pdf->Ln();
-	$pdf->SetFillColor(192,192,192);
-	$w = 40;
-
-	$tbl_header='
-	<style>
-	table {
-	   border-collapse: collapse;
-	   border-spacing: 0;
-	   padding-bottom: 2px;
-	   padding-left: 5px;
-	   padding-top: 2px;
-	}
-	tr {
-	   padding-bottom: 5px;
-	   padding-left: 0px;
-	   padding-top: 2px;
-	   border:1px;
-	   border-color:#000000;
-	}
-	th {
-	   background-color: #AAAAAA;
-	   color: #000000;
-	   font-family: Helvetica;
-	   font-weight: bold;
-	   padding-bottom: 2px;
-	   padding-top: 2px;
-	   text-align: left;
-	   border: 1px solid #CCCCCC;
-	   vertical-align: middle;
-	}
-	td {
-	   color: #000000;
-	   padding-bottom: 2px;
-	   padding-top: 2px;
-	   border: 1px solid #CCCCCC;
-	   vertical-align: middle;
-	}
-	</style>
-
-	<table style="border: 1px solid #CCCCCC" valign="middle">
-		<tr>
-			<th style="width:30px;text-align:center" valign="middle">Ord.</th>
-			<th style="width:35px;text-align:center">Cant.</th>
-			<th style="width:50px;text-align:center">ID</th>
-			<th style="width:250px;text-align:center">Descripción</th>
-			<th style="width:100px;text-align:center">Marca</th>
-			<th style="width:95px;text-align:center">Modelo</th>
-			<th style="width:115px;text-align:center">Serie</th>
-			<th style="width:60px;text-align:center">F.Compra</th>
-			<th style="width:80px;text-align:right">Importe</th>
-			<th style="width:160px;textsLastUE-align:center">Titular</th>
-		</tr>';
-
-	$tbl_footer="</table>";
-	$i = 0;
-	$sLastUE = '';
-	$sUE='';
-	$tbl_content='';
-	$fTotal=0;
 	foreach($vData as $Item=>$Valor){
 		if($iUE === 0){
 			$sUE = $Valor['nombre'];
@@ -331,10 +331,9 @@ if($vData){
 		</tr>';
 		$fTotal += $Item['importe'];
 	}
-	$pdf->writeHTML($tbl_header . utf8_encode($tbl_content) . $tbl_footer, true, false, true, false, '');
-
-	$pdf->Output('anexo_donacion.pdf');
-}else{
-	//echo "<script>window.close();</script>";
 }
+
+$pdf->writeHTML($tbl_header . utf8_encode($tbl_content) . $tbl_footer, true, false, true, false, '');
+
+$pdf->Output('anexo_donacion.pdf');
 ?>

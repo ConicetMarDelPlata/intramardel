@@ -2,5 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/conicet/public_html/
-    - /bin/cp -R intranet/recibosRetencion $DEPLOYPATH
-    - /bin/cp -R intranet $DEPLOYPATH
+    #- /bin/cp -R intranet/recibosRetencion $DEPLOYPATH
+    - /bin/cp intranet/seguridad_bd.php $DEPLOYPATH
+    - /bin/cp intranet/inv_pdf.php $DEPLOYPATH
